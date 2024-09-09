@@ -138,8 +138,7 @@ int main(int argc, char *argv[])
     mosq = mosquitto_new("unsubscribe-test", true, &mqtt_unsub_user_data);
     if (mosq == NULL)
     {
-        >>
-            return 1;
+        return 1;
     }
 
     mosquitto_connect_callback_set(mosq, on_connect);
